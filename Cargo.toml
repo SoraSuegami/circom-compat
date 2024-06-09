@@ -65,8 +65,8 @@ name = "groth16"
 harness = false
 
 [features]
-default = ["wasm", "circom-2", "ethereum"]
-wasm = ["wasmer", "wasmer/js-default"]
+default = ["wasmer/default", "circom-2", "ethereum"]
+wasm = ["wasmer/js-default"]
 bench-complex-all = []
 circom-2 = []
 ethereum = ["ethers-core"]
