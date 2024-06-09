@@ -6,7 +6,9 @@ pub use r1cs_reader::{R1CSFile, R1CS};
 mod circuit;
 pub use circuit::CircomCircuit;
 
+#[cfg(not(target_arch = "wasm32"))]
 mod builder;
+#[cfg(not(target_arch = "wasm32"))]
 pub use builder::{CircomBuilder, CircomConfig};
 
 mod qap;
